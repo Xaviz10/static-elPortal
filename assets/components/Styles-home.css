@@ -1,0 +1,383 @@
+body{
+    margin: 0px;
+    font-family: 'Spartan', sans-serif;
+    background-color: white;
+
+
+}  
+.header{
+    background-color: white ;
+    width: 100%;
+    height: 50px;
+    /* display: flex;
+    justify-content: space-between; */
+    align-items: right; 
+}
+
+.header__menu{
+    position: relative;
+    background-color: white ;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 40px;
+    width: 100%;
+    
+    min-width: 320px;
+}
+
+.menu-element__img{
+    /* height: 40px; */
+    position: relative;
+    padding: 5px 5px 5px 5px;
+    margin-left: 20px;
+    margin-right: calc(100% - 800px);
+
+    /* width: 40%; */
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.menu-element__img img{
+    height: 35px;
+}
+
+.header:hover .menu-element__img:hover{
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.menu-element {
+    padding: 5px 5px 5px 5px;
+    margin: 10px 15px 5px 15px;
+    cursor: pointer;
+    font-size: 22px;
+    color: black;
+    text-shadow: 0.5px 0.5px 0.5px #000000;
+    text-decoration: none;
+    transition: transform 0.5s;
+}
+
+.header__menu:hover .menu-element:hover{
+    transform: scale(1.3);
+    opacity: 1;
+}
+.menu-element__icon{
+    padding: 5px 5px 5px 5px;
+    margin: 10px 15px 5px 15px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.menu-element__icon img {
+    height: 25px;
+    width: 60px;
+}
+
+.header__menu .menu-element__icon{
+    display: none;
+}
+
+.header__menu:hover .menu-element__icon:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* When the screen is less than 900 pixels wide, hide all links. Show the link that contains should open and close the .header__menu (.menu-element__icon) */
+@media screen and (max-width: 900px) {
+    .header__menu a:not(:first-child) {display: none;}
+    .header__menu a.menu-element__icon {
+        display: flex;
+        width: 10px;
+    }
+    .menu-element__icon {
+        margin-left: calc(100% - 280px);
+    }
+    .menu-element__img{
+        margin-right: 10px;
+    }
+}
+
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 900px) {
+    /* .header__menu.responsive {position: relative;} */
+    .header__menu.responsive a.menu-element__icon {
+        /* width: 100%;*/
+        margin-right: 40px;
+        align-self: flex-end;
+    }
+    .header__menu.responsive .menu-element__icon {
+        margin-left: 15px;
+    }
+    .header__menu.responsive  {
+        /* margin-top: 100px; */
+        /* padding: 10px 40px; */
+        /* position: absolute; */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap; 
+    }
+    .header__menu.responsive  a{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        /* width: 100%; */
+
+    }
+}
+
+.homeView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: auto;
+    background: url(https://images.pexels.com/photos/3075974/pexels-photo-3075974.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    height: calc(100vh - 50px - 34px);
+    min-height:300px;
+
+}
+
+@media (max-width: 900px){
+    .homeView{
+        background-position-x: 50%;
+    }
+}
+
+
+.homeView__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.input{
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    height: 40px;
+    padding: 0px 20px;
+    background-color: rgba(1, 1, 1, 0.5);
+    width:70%;
+    outline: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 0.7; /* Firefox */
+}
+
+.categories__tittle{
+    font-size: 40px;
+    text-align: center;
+    margin: 20px 10px;
+}
+
+.destacados{
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 100%;
+    display: flex;
+    /* overflow-x: scroll; */
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+}
+
+.destacados__container{
+
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media(max-width: 850px) {
+    .destacados__container {
+        grid-template-columns: 100%;
+        grid-gap: 1rem;
+    }
+}
+.destacados__container:hover .destacados-propertyPreview{
+    opacity: 0.9;
+}
+
+.destacados__container:hover .destacados-propertyPreview:hover{
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+.destacados-propertyPreview{
+    
+    border-radius: 10px;
+    overflow: hidden; 
+    margin-right: 10px;
+    transition: 450ms all;
+    cursor: pointer;
+}
+
+@media(max-width: 850px) {
+    .destacados-propertyPreview {
+        max-width: 100%;
+    }
+}
+
+.destacados-propertyPreview__img{
+    
+    position: relative;
+    height: 100%;
+    object-fit: contain;
+}
+
+.main-img{
+    max-width: 100%;
+    width: 100%;
+}
+
+.destacados-propertyPreview__details{
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr 1.6fr;
+    background: linear-gradient(to top, rgba(235, 235, 235, 1) 40%, rgba(235, 235, 235,0.5) 100% );
+
+}
+
+.propertyPreview__details-area{
+    grid-column: 1 / 1;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.area__value {
+    
+    padding: 0px 4px;
+    font-size: 10px;
+}
+
+.area__icon{
+    padding: 0px 4px;
+    height: 20px;
+}
+
+.propertyPreview__details-rooms{
+
+    grid-column: 2 / 2;
+    margin: 5px 0px;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid gray;
+}
+
+.rooms__value {
+    padding: 0px 4px;
+    font-size: 10px;
+}
+
+.rooms__icon{
+    padding: 0px 4px;
+    height: 20px;
+}
+
+.propertyPreview__details-baths{
+    
+    grid-column: 3 / 3;
+    margin: 5px 0px;
+    border-left: 1px solid gray;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.baths__value {
+    padding: 0px 4px;
+    font-size: 10px;
+}
+
+.baths__icon{
+    padding: 0px 4px;
+    height: 20px;
+}
+
+
+.propertyPreview__details-price{
+ 
+    grid-column: 4 / 4;
+    margin: 5px 0px;
+    border-left: 1px solid gray;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.price__value{
+    font-size: 12px;
+}
+
+.price__type{
+    font-size: 10px;
+    color: orange;
+}
+
+.destacados-propertyPreview__title{
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3px 0px;
+    display: inline-grid;
+    grid-template-columns: auto 30%;
+    font-size: 12px;
+    background-color: #f8f3eb;
+}
+
+.propertyPreview__title-name{
+    align-self: center;
+    margin-left: 10px;
+    grid-column-start: 1;
+}
+
+.propertyPreview__title-ref{
+    align-self: center;
+    grid-column-start: 2;
+    border-left: 1px solid gray;
+    padding-left: 30px ;
+    justify-self: center;
+}
+
