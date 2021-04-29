@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/components/style.css">
+    <title>El Portal - Agencia Inmobiliaria</title>
+</head>
+<body>
+    <header>
+        <a class="header__logo" href="#Home">
+            <img src="./assets/static/icons/icon-header-elportal--white.svg" alt="El Portal">
+        </a>
+    
+        <nav class="header__menu">
+            <a class="menu__button" id="hamBtn" href="javascript:void(0);" onclick="hamMenu()">
+                <span class="button--open"></span>
+
+                <span class="button--close"></span>
+            </a>
+            <ul class="menu__options">
+                <li>
+                    <a href="#Ventas" class="menu-element">Ventas</a>
+                </li>
+                <li>
+                    <a href="#Arriendos" class="menu-element">Arriendos</a>
+                </li>
+                <li>
+                    <a href="#Emp" class="menu-element">Empeños</a>
+                </li>
+                <li>
+                    <a href="#Contactos" class="menu-element">Contactos</a>
+                </li>
+            </ul>
+    
+        </nav>
+    
+    
+    </header>
+
+    <main>
+        <section class="main-search-container">
+            <h2 class="main-search__title"> 
+                ¿Que inmueble deseas?
+            </h2>
+
+            <form class="search__form" action="">
+                <label class="search-keyword" for="keyword">
+                    <span></span>
+                    <input type="search" placeholder="Busca por código, zona, barrio...">
+                </label>
+                <label class="search-rooms" for="rooms">
+                    <select name="" id="">
+                        <option value="" disable selected>Habitaciones</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">+4</option>
+                    </select>
+                    <span></span>
+                </label>
+                <label class="search-type" for="type">
+                    <select name="" id="">
+                        <option value="" disable selected>Tipo</option>
+                        <option value="venta">Venta</option>
+                        <option value="arriendo">Arriendo</option>
+                        <option value="empeño">Empeño</option>
+                    </select>
+                    <span></span>
+                </label>
+                <button class="search-button">
+                    Buscar
+                </button>
+            </form>
+
+        </section>
+
+        <section class="main-featured-container">
+            <h2 class="main-featured__title">
+                Inmuebles Destacados
+            </h2>
+            <section class="featured-cards-container">
+                <article class="featured-cards__property">
+                    <div class="property-footer">
+                        <p class="property-footer__title">
+                            Casa en El Recreo, Sogamoso
+                            <span>C21001</span>
+                        </p>
+                        <div class="property-footer__details">
+                            <div class="details__area">
+                                <span></span>
+                                <p>112 m<sup>2</sup></p> 
+                            </div>
+                            <div class="details__rooms">
+                                <span></span>
+                                <p>3 habs. </p>                            </div>
+                            <div class="details__baths">
+                                <span></span>
+                                <p>2 b.</p> 
+                            </div>
+                            <div class="details__price">
+                                <p>$ 280'000.000</p>
+                                <span>Venta</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            
+        </section>
+
+        <section class="main-call-to-action-container">
+            <h3 class="call-to-action__question">
+                ¿Tienes un inmueble que necesitas vender, arrendar o empeñar?
+            </h3>
+            <a href="#" class="call-to-action__contacts">
+                <span>Contáctanos</span>
+            </a>
+            <p class="call-to-action__img-autor">Mattia Astorino</p>
+        </section>
+
+        <section class="main-find-out-container">
+            <section class="find-out-cards-container">
+                <article class="find-out-cards__recommendation find-out-houses">
+                    <h3 class="recommendation__description">
+                        Encuentra la casa de tus sueños
+                    </h3>
+                    <a href="#" class="recommendation__call-to-action">
+                        Descúbrela
+                    </a>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        
+        <img src="./assets/static/icons/icon-header-elportal--white.svg" alt="Logo de El Portal Agencia Inmobiliaria">
+        
+        <section class="footer-social">
+            <p class="footer-social__title">Síguenos:</p>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="el-portal-facebook"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="el-portal-instagram"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="el-portal-whatsapp"></span>
+                    </a>
+                </li>
+                
+            </ul>
+        </section>
+
+        <section class="footer-contacts">
+            <p class="footer-contacts__title">Contáctanos:</p>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="el-portal-email"></span>
+                        elportalagenciainm@hotmail.com
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="el-portal-phone"></span>
+                        (+57) 300 562 1199
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="el-portal-phone"></span>
+                        (+57) 321 308 2759
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </footer>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("menu");
+            console.log(x)
+            if (x.className === "header__menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "header__menu";
+            }
+        }
+    </script>
+</body>
+
+</html>

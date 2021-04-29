@@ -13,6 +13,7 @@
     --soft-black: #4f4f4f;
     --soft-gray: #969696;
     --portal-purple: #3E4095;
+    --portal-blue: #00AFEF;
     --portal-green: #00A859;
 
 }
@@ -298,8 +299,8 @@ header .header__logo {
     width: 50%;
     height: 50px;
 
-    font-size: 2.4rem;
-    line-height: 2.6rem;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
     color: var(--just-white);
 
     background-color: var(--portal-purple);

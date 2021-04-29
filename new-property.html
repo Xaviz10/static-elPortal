@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/components/style-new-property.css">
+    <title>El Portal - Agencia Inmobiliaria</title>
+</head>
+<body>
+    <header>
+        <a class="header__logo" href="#Home">
+            <img src="./assets/static/icons/icon-header-elportal--white.svg" alt="El Portal">
+        </a>
+    
+        <nav class="header__menu">
+            <a class="menu__button" id="hamBtn" href="javascript:void(0);" onclick="hamMenu()">
+                <span class="button--open"></span>
+                <span class="button--close"></span>
+            </a>
+            <ul class="menu__options">
+                <li>
+                    <a href="#Ventas" class="menu-element">Ventas</a>
+                </li>
+                <li>
+                    <a href="#Arriendos" class="menu-element">Arriendos</a>
+                </li>
+                <li>
+                    <a href="#Emp" class="menu-element">Empeños</a>
+                </li>
+                <li>
+                    <a href="#Contactos" class="menu-element">Contactos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+
+        <section class="main-new-property-container">
+            <p class="new-property__title">
+                Hola 
+                <span class="title__admin-name">Nhora</span>, 
+                completa el siguiente formulario para adicionar
+                una nueva propiedad.
+            </p>
+            <form class="form__new-property" action="">
+                <div class="form__photos-slider-container">
+                    <div class="form__photos-slider">
+                        <!-- <input type="file" class="new-property__add-photos">
+                            <span></span>
+                        </input> -->
+                        <img lass="photos-slider__image" src="./assets/static/img/img-property.jpg"></img>
+                        <img lass="photos-slider__image" src="./assets/static/img/img-property.jpg"></img>
+                        <img lass="photos-slider__image" src="./assets/static/img/img-property.jpg"></img>
+    
+                        <button class="photos-slider__button-add-photos">
+                            <span></span>
+                        </button>
+    
+                        
+                    </div>
+                </div>
+
+                <div class="form__property-characteristics">
+                    <label class="new-property__price" for="">
+                        <input type="text" placeholder="Título">
+                    </label>
+    
+                    <label class="new-property__type" for="">
+                        <select name="" id="">
+                            <option value="" disable selected>Tipo</option>
+                            <option value="venta">Venta</option>
+                            <option value="arriendo">Arriendo</option>
+                            <option value="empeño">Empeño</option>
+                        </select>
+                    </label>
+    
+                    <label class="new-property__code" for="">
+                        <input type="text" placeholder="Código">
+                    </label>
+    
+                    <label class="new-property__area" for="">
+                        <input type="number" placeholder="Área">
+                    </label>
+    
+                    <label class="new-property__rooms" for="">
+                        <input type="number" placeholder="Habitaciones">
+                    </label>
+    
+                    <label class="new-property__bathrooms" for="">
+                        <input type="number" placeholder="Baños">
+                    </label>
+    
+                    <label class="new-property__parking" for="">
+                        <input type="number" placeholder="Parqueaderos">
+                    </label>
+                </div>
+                
+                <div class="form__property-complements">
+                    <label class="new-property__admin-value" for="">
+                        <input type="number" placeholder="Administración">
+                    </label>
+    
+                    <label class="new-property__year" for="">
+                        <input type="number" placeholder="Año de construcción">
+                    </label>
+    
+                    <label class="new-property__status-level" for="">
+                        <input type="number" placeholder="Estrato">
+                    </label>
+    
+                    <label class="new-property__flat" for="">
+                        <input type="number" placeholder="Piso">
+                    </label>
+    
+                    <label class="new-property__subsidy" for="">
+                        <input type="checkbox">
+                        Subsidio gobierno
+                    </label>
+                </div>
+
+                <div class="form__property-aditional-characteristics">
+                    <label class="new-property__characteristic" for="">
+                        <input type="checkbox">
+                        <input type="text" placeholder="Característica adicional" value="Terraza privada">
+                        <button class="form-button__delete-characteristic">
+                            <span></span>
+                            x
+                        </button>
+                    </label>
+                    <button class="form-button__add-characteristic">
+                        <span></span> 
+                        +
+                    </button>
+
+                </div>
+
+                <div class="form__property-description">
+                    <label class="new-property__title-description" for="">
+                        <textarea name="title-description"  rows="3" form=""
+                                        placeholder=""></textarea>
+                    </label>
+
+                    <label class="new-property__detailed-description" for="">
+                        <textarea name="detailed-description"   rows="10" form=""
+                        placeholder=""></textarea>
+                    </label>
+                </div>
+                <button class="form-button__save-property">
+                    <span></span> 
+                    Confirmar
+                </button>
+                <button class="form-button__cancel-property">
+                    <span></span> 
+                    Cancelar
+                </button>
+            </form>
+
+            <div class="property-admin">
+                <button class="property-admin__button-edit">
+                    <span></span> 
+                    Editar
+                </button>
+                <button class="property-admin__button-delete">
+                    <span></span>
+                    Eliminar
+                </button>
+            </div>
+
+        
+    </main>
+
+    <footer>
+        
+        <img src="./assets/static/icons/icon-header-elportal--white.svg" alt="Logo de El Portal Agencia Inmobiliaria">
+        
+        <section class="footer-social">
+            <p class="footer-social__title">Síguenos:</p>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="el-portal-facebook"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="el-portal-instagram"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="el-portal-whatsapp"></span>
+                    </a>
+                </li>
+                
+            </ul>
+        </section>
+
+        <section class="footer-contacts">
+            <p class="footer-contacts__title">Contáctanos:</p>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="el-portal-email"></span>
+                        elportalagenciainm@hotmail.com
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="el-portal-phone"></span>
+                        (+57) 300 562 1199
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="el-portal-phone"></span>
+                        (+57) 321 308 2759
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </footer>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("menu");
+            console.log(x)
+            if (x.className === "header__menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "header__menu";
+            }
+        }
+    </script>
+</body>
+
+</html>
